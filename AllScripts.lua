@@ -1,6 +1,6 @@
 -- First
 loadstring(game:HttpGet("https://raw.githubusercontent.com/daniivanovivanov/prosharka/refs/heads/main/forqv0ckandmotov"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KirillMotov/Presents/refs/heads/main/Fling?token=GHSAT0AAAAAADBH5MMEUGJJIG6JNUO3M6ZQZ7FP5YA"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KirillMotov/Presents/refs/heads/main/Fling?token=GHSAT0AAAAAADBH5MMFXIM27NWEKMAPZ2MOZ7FVTDQ"))()
 
 -- Second
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
