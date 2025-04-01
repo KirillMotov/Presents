@@ -18,5 +18,5 @@ end
 local function playSound(soundId, Volume, Pitch, loop, Parent, name)
 local currentRemote = getRemoteEvent()
 currentRemote:FireServer("newSound", soundId, Volume, Pitch, loop, Parent, name)
-currentRemote:FireServer("playSound", randomName)
+currentRemote:FireServer("playSound", name)
 end
