@@ -1,0 +1,32 @@
+local player = game.Players.LocalPlayer
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local workspace = game:GetService("Workspace")
+local randomName = nil
+
+local function findRemoteEvent(name, parent)
+    for _, child in ipairs(parent:GetDescendants()) do
+        if child:IsA("RemoteEvent") and child.Name == name then
+            return child
+        end
+    end
+    return nil
+end
+
+local function getRemoteEvent() --// Change if the games have Renamed the AC6 Remotes name
+    return findRemoteEvent("AC6_FE_Sounds", replicatedStorage) or findRemoteEvent("AC6_FE_Sounds", workspace)
+end
+
+local function playSound(soundId, Volume, Pitch, loop, Parent, name)
+local args = {
+                    [1] = "newSound",
+                    [2] = name,
+                    [3] = Parent,
+                    [4] = soundId,
+                    [5] = Pitch,
+                    [6] = Volume,
+                    [7] = loop
+                }
+local currentRemote = getRemoteEvent()
+currentRemote:FireServer(unpack(args))
+currentRemote:FireServer("playSound", randomName)
+end
