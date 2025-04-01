@@ -11,21 +11,11 @@ local function findRemoteEvent(name, parent)
     return nil
 end
 
-local function getRemoteEvent() --// Change if the games have Renamed the AC6 Remotes name
+local function getRemoteEvent()
     return findRemoteEvent("AC6_FE_Sounds", replicatedStorage) or findRemoteEvent("AC6_FE_Sounds", workspace)
 end
 
 local function playSound(soundId, Volume, Pitch, loop, Parent, name)
-  local args = {
-                    [1] = "newSound",
-                    [2] = randomName,
-                    [3] = InjectTo,
-                    [4] = assetId,
-                    [5] = pitch,
-                    [6] = volume,
-                    [7] = loopEnabled
-                }
-                currentRemote:FireServer(unpack(args))
 local currentRemote = getRemoteEvent()
 currentRemote:FireServer("newSound", name, Parent, soundId, Pitch, Volume, loop)
 currentRemote:FireServer("playSound", name)
