@@ -1,7 +1,6 @@
 local player = game.Players.LocalPlayer
 local replicatedStorage = game:GetService("ReplicatedStorage")
 local workspace = game:GetService("Workspace")
-local randomName = nil
 
 local function findRemoteEvent(name, parent)
     for _, child in ipairs(parent:GetDescendants()) do
@@ -17,7 +16,7 @@ local function getRemoteEvent() --// Change if the games have Renamed the AC6 Re
 end
 
 local function playSound(soundId, Volume, Pitch, loop, Parent, name)
-local args = {
+   local args = {
                     [1] = "newSound",
                     [2] = name,
                     [3] = Parent,
