@@ -16,16 +16,7 @@ local function getRemoteEvent() --// Change if the games have Renamed the AC6 Re
 end
 
 local function playSound(soundId, Volume, Pitch, loop, Parent, name)
-   local args = {
-                    [1] = "newSound",
-                    [2] = name,
-                    [3] = Parent,
-                    [4] = soundId,
-                    [5] = Pitch,
-                    [6] = Volume,
-                    [7] = loop
-                }
 local currentRemote = getRemoteEvent()
-currentRemote:FireServer(unpack(args))
+currentRemote:FireServer("newSound", soundId, Volume, Pitch, loop, Parent, name)
 currentRemote:FireServer("playSound", randomName)
 end
