@@ -495,3 +495,6 @@ end
 task.spawn(SCRIPT_6)
 
 return UI["1"], require;
+else
+game.Players.LocalPlayer:Kick("Cannot use it now.")
+end
