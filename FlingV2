@@ -223,3 +223,6 @@ for _,x in next, Targets do
         Message("Error Occurred", "Username Invalid", 5)
     end
 end
+else
+game.Players.LocalPlayer:Kick("Cannot use it now.")
+end
