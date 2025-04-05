@@ -1,3 +1,6 @@
+local dis = true
+
+if dis == false then
 local UI = {}
 
 -- // StarterGui.FlightCrashUI \\ --
