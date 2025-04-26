@@ -1,5 +1,5 @@
 --Script made by r3da09
- local dis = true
+ local dis = false
 
 if dis == false then
 local Targets = {"All"} -- "All", "Target Name", "r3da09"
